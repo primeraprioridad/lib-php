@@ -2,9 +2,9 @@
 
 [khipu - Recarga, paga, cobra](https://khipu.com)
 
-Versión Biblioteca: 1.1.2
+Versión Biblioteca: 1.2
 
-Versión API Khipu: 1.1
+Versión API Khipu: 1.2
 
 Biblioteca PHP para utilizar los servicios de Khipu.com
 
@@ -12,21 +12,24 @@ La documentación de Khipu.com se puede ver desde aquí: https://khipu.com/page/
 
 ## Introducción
 
-Khipu cuenta con varios servicios, algunos de ellos:
+La API de Khipu cuenta con varios servicios, los cuales son:
 
-1) Crear Cobros y enviarlos por Mail.
-
-2) Crear Página de Pago.
-
-3) Recibiendo y validando la notificación de un pago.
-
-4) Verificar Estado de una cuenta Khipu.
+* Ver estado de la cuenta Khipu
+* Crear un botón de pago
+* Crear un cobro por Mail
+* Crear URL para un pago
+* Expirar un cobro
+* Consultar estado de un pago
+* Marcar un pago como pagado
+* Marcar un pago como rechazado
+* Actualizar versión de la notificación
+* Obtener listado de bancos
 
 Para utilizar estos servicios se debe cargar el archivo Khipu.php
 
-En la carpeta examples existen otros ejemplos.
 
-## 1) Crear Cobros y enviarlos por Mail
+## Algunos Ejemplos
+### 1) Crear Cobros y enviarlos por Mail
 
 Para crear cobros, necesitamos identificar al cobrador y a los destinatarios.
 A continuación un ejemplo
@@ -75,7 +78,7 @@ A continuación un ejemplo
 
 ```
 
-## 2) Crear Página de Pago
+### 2) Crear Página de Pago
 
 Crear una página de pago también se requiere identificarse, a continuación un
 ejemplo:
@@ -116,7 +119,7 @@ ejemplo:
 
 ```
 
-## 3) Recibiendo y validando la notificación de un pago
+### 3) Recibiendo y validando la notificación de un pago
 
 Este servicio debe ser utilizado en la página que recibirá el POST desde
 Khipu y no require identificar al cobrador.
@@ -140,7 +143,7 @@ A continuación un ejemplo:
 
 ```
 
-## 4) Verificar Estado de una cuenta Khipu
+### 4) Verificar Estado de una cuenta Khipu
 
 Este servicio permite consultar el estado de una cuenta khipu, la cual retorna
 un json mencionando el ambiente en que se encuentra y si puede recibir pagos.
@@ -158,6 +161,8 @@ A continuación un ejemplo:
   $json = $khipu_service->consult();
 
 ```
+
+En la carpeta examples existen otros ejemplos.
 
 ## Extra
 
